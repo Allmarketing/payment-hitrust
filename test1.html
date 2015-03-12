@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>測試網際威信刷卡</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript" src="js/jquery/jquery-1.8.2.js"></script>
+    </head>
+    <body>
+        <form action="card-test2.php" method="post">
+            <div>
+                訂單:<input type="text" name="orderid" value=""/><br/>
+                訂單金額:<input type="text" name="price" value=""/>
+            </div>
+            <input type="checkbox" name="use_ctravel" id="use_ctravel" value="1"/><label for="use_ctravel">使用國旅卡</label>
+            <div id="ctravel_opts" style="display:none">
+                行程起日:<input type="text" name="ctravel_startdate" value=""/><span>mmddyyyy</span><br/>
+                行程迄日:<input type="text" name="ctravel_enddate" value=""/><span>mmddyyyy</span><br/>
+                郵遞區號:<input type="text" name="ctravel_zipcode" value=""/><span>3位以內數字</span><br/>
+                身份證字號:<input type="text" name="tw_id" value=""/>
+            </div>
+            <div>
+                訂單說明:<br/>
+                <textarea name="orderdesc" maxlengh="40" rows="3" cols="30"></textarea>
+            </div>
+            <div><input type="submit" value="送出"/></div>
+        </form>
+        <script type="text/javascript">
+            jQuery(function($){
+                $("#use_ctravel").click(function(evt){
+                    if(this.checked){
+                        $("#ctravel_opts").slideDown();
+                    }else{
+                        $("#ctravel_opts").slideUp();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<HTML>
+<HEAD><TITLE>B2C交易請求</TITLE><HEAD>
+<BODY>
+<CENTER>
+<FORM NAME="FROM1" ACTION="https://testtrustlink.hitrust.com.tw/TrustLink/TrxReqForJava"
+      METHOD="POST" >
+<H1>B2C交易請求</H1><BR>
+<TABLE BORDER=1 CELLPADDING=3>                               
+<TR><TD COLSPAN=2 ALIGN=CENTER><EM>輸入參數</EM></TD></TR>   
+<TR>                                                          
+        <TD><b>交易類型</TD>                                
+        <TD><INPUT TYPE="RADIO" name="Type" value="Auth" checked><b>授權</b><BR>
+            <INPUT TYPE="RADIO" name="Type" value="AuthRe"      ><b>取消授權</b><BR>
+            <INPUT TYPE="RADIO" name="Type" value="Capture"     ><b>請款</b><BR>
+            <INPUT TYPE="RADIO" name="Type" value="CaptureRe"   ><b>取消請款</b><BR>
+            <INPUT TYPE="RADIO" name="Type" value="Refund"      ><b>退款</b><BR>
+            <INPUT TYPE="RADIO" name="Type" value="RefundRe"    ><b>取消退款</b><BR>
+            <INPUT TYPE="RADIO" name="Type" value="Query"       ><b>交易查詢</b><BR>
+            </TD> 
+</TR>
+<TR>                                                          
+        <TD><b>商店代號</b></TD>                                 
+        <TD><INPUT TYPE="TEXT" NAME="storeid" SIZE=9 value="XXXXX"></TD>  
+</TR>
+<TR>                                                          
+        <TD><b>訂單編號</b></TD>                                 
+        <TD><INPUT TYPE="TEXT" NAME="ordernumber" SIZE=9></TD>  
+</TR>
+<TR>                                                          
+        <TD><b>訂單金額</b></TD>                                 
+        <TD><INPUT TYPE="TEXT" NAME="amount" SIZE=20 value="100"></TD>  
+</TR>
+<TR>                                                          
+        <TD><b>訂單說明</b></TD>                                 
+        <TD><INPUT TYPE="TEXT" NAME="orderdesc" SIZE=20 value="test"></TD>  
+</TR>
+<TR>                                                          
+        <TD>信用卡號</TD>                                 
+        <TD><INPUT TYPE="TEXT" NAME="pan" SIZE=20></TD>  
+</TR>
+<TR>                                                          
+        <TD>信用卡到期日（YYMM）</TD>                                 
+        <TD><INPUT TYPE="TEXT" NAME="expiry" SIZE=6></TD>  
+</TR>
+<TR>                                                          
+        <TD><b>交易類別</b></TD>                                 
+        <TD><INPUT TYPE="RADIO" name="depositflag" value="0" checked>一般交易<BR>
+            <INPUT TYPE="RADIO" name="depositflag" value="1">SALE交易</TD>  
+</TR>
+<TR>                                                          
+        <TD><b>即時交易明細查詢</b></TD>                                 
+        <TD><INPUT TYPE="RADIO" name="queryflag" value="0" checked>不要<BR>
+            <INPUT TYPE="RADIO" name="queryflag" value="1">要</TD>  
+</TR>
+<TR>                                                          
+        <TD><INPUT TYPE="SUBMIT" VALUE="執行"></TD>                                 
+        <TD><INPUT TYPE="RESET" VALUE="取消">
+            <INPUT TYPE="HIDDEN" NAME="returnURL" VALUE="http://localhost/WI/B2C_Return.asp">
+            <INPUT TYPE="HIDDEN" NAME="merUpdateURL" VALUE="http://localhost/B2C_MerUpdate.asp"></TD>  
+</TR>                                                       
+</TABLE>                                                         
+</FORM>
+</CENTER>
+</BODY>
+</HTML>

@@ -1,0 +1,36 @@
+Array
+(
+    [type] => AUTH
+    [ordernumber] => DEV201503120002
+    [storeid] => 61713
+    [orderdesc] => defult-desc
+    [currency] => NTD
+    [retcode] => 00
+    [authCode] => 055034
+    [authRRN] => 055034055034
+    [orderstatus] => 03
+    [approveamount] => 35000
+    [depositamount] => 35000
+    [credamount] => 0
+    [orderdate] => 2015-03-12-14.34.46.628827
+    [paybatchnumber] => 
+    [capDate] => 2015-03-12-14.34.46.628651
+    [credbatchnumber] => 
+    [credcode] => 
+    [credRRN] => 
+    [creddate] => 
+    [eci] => SSL
+    [e06] => 
+    [e07] => 
+    [e08] => 
+    [e09] => 
+    [e10] => 
+    [authhostdate] => 143446
+    [authhosttime] => 0312
+    [redemordernum] => 
+    [redem_discount_point] => 
+    [redem_discount_amount] => 
+    [redem_purchase_amount] => 
+    [redem_balance_point] => 
+    [cavv] => 
+)
